@@ -24,7 +24,7 @@ const ProductDetail = () => {
       <div>
         <h2>{item?.title}</h2>
         <h3>{item?.price}</h3>
-        <small>{item?.choice === true ? 'Conscious choice' : ''}</small>
+        <small>{item?.choice === true ? 'Conscious choice^^' : ''}</small>
       </div>
     </div>
   );
