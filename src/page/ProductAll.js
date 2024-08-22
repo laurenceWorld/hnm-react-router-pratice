@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ProductCard from '../component/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
+import ProductCard from '../component/productCard';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
