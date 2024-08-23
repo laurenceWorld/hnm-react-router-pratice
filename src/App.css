@@ -15,15 +15,23 @@
 
 .nav-section img {
   width: 10em;
+  cursor: pointer;
 }
 
 .menu-list {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-list li {
   padding: 10px;
+  cursor: pointer;
+}
+
+.menu-list li:hover {
+  color: red;
 }
 
 .menu-area {
@@ -60,28 +68,135 @@
 }
 
 .product_card {
-  width: 15em;
+  width: 13em;
   margin-bottom: 1em;
-  margin: 1em;
+  margin: 0.5em;
+}
+
+.product_card small {
+  color: darkred;
 }
 
 .product_card img {
-  width: 15em;
+  width: 13em;
+  cursor: pointer;
 }
 
 .product_card:hover {
   transform: scale(1.1);
+  background-color: whitesmoke;
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
-.product_detail {
+.product_area {
+  margin-top: 2em;
+}
+
+.product_img {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3em;
-  gap: 2em;
+  justify-content: flex-end;
 }
 
-@media screen and (max-width: 576px) {
+.product_img img {
+  width: 240px;
+}
+
+.product_info {
+  margin: 0.5em;
+}
+
+.product_info_btn {
+  width: 20em;
+  margin-top: 1em;
+}
+
+#dropdown-basic {
+  border: 1px solid black;
+}
+
+.sidenav_open {
+  display: none;
+}
+
+/* sidenav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(200, 200, 200, 0.5);
+  overflow-x: hidden;
+  padding-top: 100px;
+  transition: 0.5s;
+}
+
+.sidenav li {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #272626;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 12px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+  font-size: 2em;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .product_all {
+    margin-top: 2em;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .sidenav_open {
+    display: block;
+  }
+
+  .sidenav_open {
+    cursor: pointer;
+    position: fixed;
+    top: 0.5em;
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
+  .product_all div {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 770px) {
   .product_card {
     width: 21em;
   }
@@ -89,4 +204,21 @@
   .product_card img {
     width: 21em;
   }
+
+  .product_area {
+    text-align: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .product_img {
+    display: flex;
+    justify-content: center;
+  }
+  .product_card {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
 }
